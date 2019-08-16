@@ -509,7 +509,8 @@ class Job(object):
             self.retry += 1
             try:
                 with session.change_context({'job_uuid': self._uuid}):
-                    self.result = self.func(session, *self.args, **self.kwargs)
+                    result = self.func(session, *self.args, **self.kwargs)
+                    self.result = unicode(self.result) + u'\n-------\n' + unicode(result)
             except RetryableJobError as err:
                 if err.ignore_retry:
                     self.retry -= 1
@@ -585,7 +586,7 @@ class Job(object):
         if reset_retry:
             self.retry = 0
         if result is not None:
-            self.result = result
+            self.result = unicode(self.result) + u'\n-------\n' + unicode(result)
 
     def set_enqueued(self, worker):
         self.state = ENQUEUED
@@ -603,7 +604,7 @@ class Job(object):
         self.date_done = datetime.now()
         self.worker_uuid = None
         if result is not None:
-            self.result = result
+            self.result = unicode(self.result) + u'\n-------\n' + unicode(result)
 
     def set_failed(self, exc_info=None):
         self.state = FAILED
@@ -642,7 +643,7 @@ class Job(object):
         self.eta = timedelta(seconds=eta_seconds)
         self.exc_info = None
         if result is not None:
-            self.result = result
+            self.result = unicode(self.result) + u'\n-------\n' + unicode(result)
 
     def related_action(self, session):
         if not hasattr(self.func, 'related_action'):
@@ -675,7 +676,7 @@ def job(func=None, default_channel='root', retry_pattern=None):
     stored in the OpenERP queue.job model. The arguments and keyword
     arguments given in ``delay`` will be the arguments used by the
     decorated function when it is executed.
-
+Record exported with
     ``retry_pattern`` is a dict where keys are the count of retries and the
     values are the delay to postpone a job.
 

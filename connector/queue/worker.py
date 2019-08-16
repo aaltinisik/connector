@@ -29,7 +29,7 @@ import uuid
 from datetime import datetime
 from StringIO import StringIO
 
-from psycopg2 import OperationalError, ProgrammingError
+from psycopg2 import OperationalError, ProgrammingError, IntegrityError
 
 import openerp
 from openerp.service.model import PG_CONCURRENCY_ERRORS_TO_RETRY
@@ -140,6 +140,11 @@ class Worker(threading.Thread):
             # delay the job later, requeue
             retry_postpone(job, unicode(err), seconds=err.seconds)
             _logger.debug('%s postponed', job)
+
+        except IntegrityError as err:
+            # Automatically retry the typical Integrity Errors
+            retry_postpone(job, unicode(err), seconds=PG_RETRY)
+            _logger.debug('%s IntegrityError, postponed', job)
 
         except OperationalError as err:
             # Automatically retry the typical transaction serialization errors
