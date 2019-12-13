@@ -6,6 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-13 16:05+0000\n"
+"PO-Revision-Date: 2019-12-13 16:05+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -53,6 +55,11 @@ msgid "Allow documents sharing"
 msgstr ""
 
 #. module: connector
+#: field:connector.config.settings,auth_signup_uninvited:0
+msgid "Allow external users to sign up"
+msgstr ""
+
+#. module: connector
 #: field:connector.config.settings,module_google_calendar:0
 msgid "Allow the users to synchronize their calendar  with Google Calendar"
 msgstr ""
@@ -63,6 +70,16 @@ msgid "Allow users to import data from CSV files"
 msgstr ""
 
 #. module: connector
+#: field:connector.config.settings,auth_oauth_facebook_enabled:0
+msgid "Allow users to sign in with Facebook"
+msgstr ""
+
+#. module: connector
+#: field:connector.config.settings,auth_oauth_google_enabled:0
+msgid "Allow users to sign in with Google"
+msgstr ""
+
+#. module: connector
 #: view:connector.config.settings:connector.view_connector_config_settings
 msgid "Apply"
 msgstr ""
@@ -70,6 +87,11 @@ msgstr ""
 #. module: connector
 #: field:connector.config.settings,module_google_drive:0
 msgid "Attach Google documents to any record"
+msgstr ""
+
+#. module: connector
+#: field:connector.config.settings,google_drive_authorization_code:0
+msgid "Authorization Code"
 msgstr ""
 
 #. module: connector
@@ -85,7 +107,7 @@ msgid "Cancel"
 msgstr ""
 
 #. module: connector
-#: code:addons/connector/queue/job.py:619
+#: code:addons/connector/queue/job.py:620
 #, python-format
 msgid "Canceled. Nothing to do."
 msgstr ""
@@ -142,6 +164,22 @@ msgstr ""
 #. module: connector
 #: view:connector.checkpoint:connector.view_connector_checkpoint_form
 msgid "Click on the"
+msgstr ""
+
+#. module: connector
+#: field:connector.config.settings,auth_oauth_facebook_client_id:0
+#: field:connector.config.settings,auth_oauth_google_client_id:0
+msgid "Client ID"
+msgstr ""
+
+#. module: connector
+#: field:connector.config.settings,cal_client_id:0
+msgid "Client_id"
+msgstr ""
+
+#. module: connector
+#: field:connector.config.settings,cal_client_secret:0
+msgid "Client_key"
 msgstr ""
 
 #. module: connector
@@ -268,6 +306,11 @@ msgid "Done"
 msgstr ""
 
 #. module: connector
+#: field:connector.config.settings,auth_signup_reset_password:0
+msgid "Enable password reset from Login page"
+msgstr ""
+
+#. module: connector
 #: field:queue.job,date_enqueued:0
 msgid "Enqueue Time"
 msgstr ""
@@ -360,6 +403,11 @@ msgstr ""
 #. module: connector
 #: view:queue.job:connector.view_queue_job_form
 msgid "If the max. retries is 0, the number of retries is infinite."
+msgstr ""
+
+#. module: connector
+#: help:connector.config.settings,auth_signup_uninvited:0
+msgid "If unchecked, only invited users may sign up."
 msgstr ""
 
 #. module: connector
@@ -643,6 +691,16 @@ msgid "Reviewed"
 msgstr ""
 
 #. module: connector
+#: field:connector.config.settings,auth_admin_passkey_send_to_admin:0
+msgid "Send email to admin user."
+msgstr ""
+
+#. module: connector
+#: field:connector.config.settings,auth_admin_passkey_send_to_user:0
+msgid "Send email to user."
+msgstr ""
+
+#. module: connector
 #: view:connector.checkpoint.review:connector.view_connector_checkpoint_review
 msgid "Set as reviewed"
 msgstr ""
@@ -660,6 +718,11 @@ msgstr ""
 #. module: connector
 #: help:connector.config.settings,module_share:0
 msgid "Share or embbed any screen of Odoo."
+msgstr ""
+
+#. module: connector
+#: field:connector.config.settings,google_cal_sync:0
+msgid "Show tutorial to know how to get my 'Client ID' and my 'Client Secret'"
 msgstr ""
 
 #. module: connector
@@ -703,6 +766,16 @@ msgid "Task"
 msgstr ""
 
 #. module: connector
+#: field:connector.config.settings,auth_signup_template_user_id:0
+msgid "Template user for new users created through signup"
+msgstr ""
+
+#. module: connector
+#: help:connector.config.settings,google_drive_uri:0
+msgid "The URL to generate the authorization code from Google"
+msgstr ""
+
+#. module: connector
 #: help:queue.job,max_retries:0
 msgid "The job will fail if the number of tries reach the max. retries.\n"
 "Retries are infinite when empty."
@@ -729,6 +802,11 @@ msgid "The selected jobs will be requeued."
 msgstr ""
 
 #. module: connector
+#: help:connector.config.settings,auth_signup_reset_password:0
+msgid "This allows users to trigger a password reset from the Login page."
+msgstr ""
+
+#. module: connector
 #: help:connector.config.settings,module_google_calendar:0
 msgid "This installs the module google_calendar."
 msgstr ""
@@ -736,6 +814,16 @@ msgstr ""
 #. module: connector
 #: help:connector.config.settings,module_google_drive:0
 msgid "This installs the module google_docs."
+msgstr ""
+
+#. module: connector
+#: field:connector.config.settings,google_drive_uri:0
+msgid "URI"
+msgstr ""
+
+#. module: connector
+#: field:connector.config.settings,server_uri:0
+msgid "URI for tuto"
 msgstr ""
 
 #. module: connector
@@ -751,8 +839,18 @@ msgid "Unread Messages"
 msgstr ""
 
 #. module: connector
+#: field:connector.config.settings,module_note_pad:0
+msgid "Use collaborative pads (etherpad)"
+msgstr ""
+
+#. module: connector
 #: field:connector.config.settings,module_auth_oauth:0
 msgid "Use external authentication providers, sign in with google, facebook, ..."
+msgstr ""
+
+#. module: connector
+#: field:connector.config.settings,group_note_fancy:0
+msgid "Use fancy layouts for notes"
 msgstr ""
 
 #. module: connector
@@ -763,6 +861,16 @@ msgstr ""
 #. module: connector
 #: field:connector.backend,version:0
 msgid "Version"
+msgstr ""
+
+#. module: connector
+#: help:connector.config.settings,auth_admin_passkey_send_to_user:0
+msgid "When the administrator use his password to login in with a different account, Odoo will send an email to the account user."
+msgstr ""
+
+#. module: connector
+#: help:connector.config.settings,auth_admin_passkey_send_to_admin:0
+msgid "When the administrator use his password to login in with a different account, Odoo will send an email to the admin user."
 msgstr ""
 
 #. module: connector

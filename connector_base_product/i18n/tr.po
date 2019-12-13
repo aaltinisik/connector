@@ -19,5 +19,5 @@ msgstr ""
 #: view:product.product:connector_base_product.product_normal_form_view
 #: view:product.template:connector_base_product.product_template_common_form
 msgid "Connectors"
-msgstr ""
+msgstr "Bağlaçlar"
 

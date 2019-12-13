@@ -1,27 +1,23 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * connector
+#	* connector
 #
-# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: connector (8.0)\n"
+"Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-01 16:08+0000\n"
-"PO-Revision-Date: 2017-06-21 12:52+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
-"Language-Team: Turkish (http://www.transifex.com/oca/OCA-connector-8-0/"
-"language/tr/)\n"
-"Language: tr\n"
+"POT-Creation-Date: 2019-12-13 16:05+0000\n"
+"PO-Revision-Date: 2019-12-13 16:05+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: \n"
 
 #. module: connector
 #: model:ir.actions.act_window,help:connector.action_connector_checkpoint
-msgid ""
-"<p>No record to check.</p>\n"
+msgid "<p>No record to check.</p>\n"
 "                <p> When a connector imports new records which have\n"
 "                    configuration or reviews to do manually, they\n"
 "                    will appear in this list.  Once a record has been\n"
@@ -30,18 +26,26 @@ msgid ""
 "                    based on their type.  Only some need a manual\n"
 "                    review.</p>\n"
 "            "
-msgstr ""
+msgstr "<p>No record to check.</p>\n"
+"                <p> When a connector imports new records which have\n"
+"                    configuration or reviews to do manually, they\n"
+"                    will appear in this list.  Once a record has been\n"
+"                    checked, click on the 'Reviewed' button.  </p>\n"
+"                <p>The connectors list the new records to verify\n"
+"                    based on their type.  Only some need a manual\n"
+"                    review.</p>\n"
+"            "
 
 #. module: connector
 #: code:addons/connector/checkpoint/checkpoint.py:136
 #, python-format
 msgid "A %s needs a review."
-msgstr ""
+msgstr "A %s kontrol edilmeli."
 
 #. module: connector
 #: field:connector.config.settings,module_portal:0
 msgid "Activate the customer portal"
-msgstr ""
+msgstr "Müşteri portalını aktifleştir"
 
 #. module: connector
 #: field:queue.job,active:0
@@ -51,37 +55,57 @@ msgstr "Aktif"
 #. module: connector
 #: field:connector.config.settings,alias_domain:0
 msgid "Alias Domain"
-msgstr ""
+msgstr "Takma alan adı"
 
 #. module: connector
 #: field:connector.config.settings,module_share:0
 msgid "Allow documents sharing"
-msgstr ""
+msgstr "Döküman paylaşımına izin ver"
+
+#. module: connector
+#: field:connector.config.settings,auth_signup_uninvited:0
+msgid "Allow external users to sign up"
+msgstr "Dış kullanıcıların üye olmasına izin ver."
 
 #. module: connector
 #: field:connector.config.settings,module_google_calendar:0
 msgid "Allow the users to synchronize their calendar  with Google Calendar"
-msgstr ""
+msgstr "Kullanıcıların takvimlerini google takvim ile senronize etmelerine izin ver"
 
 #. module: connector
 #: field:connector.config.settings,module_base_import:0
 msgid "Allow users to import data from CSV files"
-msgstr ""
+msgstr "Kullanıcıların CSV dosyalarından veri içe aktarmalarına izin ver"
+
+#. module: connector
+#: field:connector.config.settings,auth_oauth_facebook_enabled:0
+msgid "Allow users to sign in with Facebook"
+msgstr "Kullanıcıların Facebook ile giriş yapmalarına izin ver"
+
+#. module: connector
+#: field:connector.config.settings,auth_oauth_google_enabled:0
+msgid "Allow users to sign in with Google"
+msgstr "Kullanıcıların google ile giriş yapmalarına izin ver"
 
 #. module: connector
 #: view:connector.config.settings:connector.view_connector_config_settings
 msgid "Apply"
-msgstr ""
+msgstr "Uygula"
 
 #. module: connector
 #: field:connector.config.settings,module_google_drive:0
 msgid "Attach Google documents to any record"
-msgstr ""
+msgstr "Kayıtlara google dökümanları eklemeye izin ver"
+
+#. module: connector
+#: field:connector.config.settings,google_drive_authorization_code:0
+msgid "Authorization Code"
+msgstr "Yetkilendirme Kodu"
 
 #. module: connector
 #: view:connector.config.settings:connector.view_connector_config_settings
 msgid "Backends"
-msgstr ""
+msgstr "Arka Dükkanlar"
 
 #. module: connector
 #: view:connector.checkpoint.review:connector.view_connector_checkpoint_review
@@ -91,25 +115,26 @@ msgid "Cancel"
 msgstr "Vazgeç"
 
 #. module: connector
-#: code:addons/connector/queue/job.py:619
+#: code:addons/connector/queue/job.py:620
 #, python-format
 msgid "Canceled. Nothing to do."
-msgstr ""
+msgstr "İptal edildi. Yapacak birşey yok."
 
 #. module: connector
 #: code:addons/connector/queue/model.py:462
 #, python-format
 msgid "Cannot change the root channel"
-msgstr ""
+msgstr "Ana kanal değiştirlemez"
 
 #. module: connector
 #: code:addons/connector/queue/model.py:469
 #, python-format
 msgid "Cannot remove the root channel"
-msgstr ""
+msgstr "Ana kanal kaldırılamaz"
 
 #. module: connector
-#: view:queue.job:connector.view_queue_job_search field:queue.job,channel:0
+#: view:queue.job:connector.view_queue_job_search
+#: field:queue.job,channel:0
 #: view:queue.job.function:connector.view_queue_job_function_search
 #: field:queue.job.function,channel_id:0
 msgid "Channel"
@@ -118,7 +143,7 @@ msgstr "Kanal"
 #. module: connector
 #: sql_constraint:queue.job.channel:0
 msgid "Channel complete name must be unique"
-msgstr ""
+msgstr "Kanalın tam adı tekil olmalı"
 
 #. module: connector
 #: model:ir.actions.act_window,name:connector.action_queue_job_channel
@@ -127,27 +152,43 @@ msgstr ""
 #: view:queue.job.channel:connector.view_queue_job_channel_search
 #: view:queue.job.channel:connector.view_queue_job_channel_tree
 msgid "Channels"
-msgstr ""
+msgstr "Kanallar"
 
 #. module: connector
 #: model:ir.ui.menu,name:connector.menu_checkpoint
 msgid "Checkpoint"
-msgstr ""
+msgstr "Kontrol noktası"
 
 #. module: connector
 #: field:connector.checkpoint.review,checkpoint_ids:0
 msgid "Checkpoints"
-msgstr ""
+msgstr "Kontrol Noktaları"
 
 #. module: connector
 #: model:ir.model,name:connector.model_connector_checkpoint_review
 msgid "Checkpoints Review"
-msgstr ""
+msgstr "Kontrol Noktaları İncelemesi"
 
 #. module: connector
 #: view:connector.checkpoint:connector.view_connector_checkpoint_form
 msgid "Click on the"
-msgstr ""
+msgstr "Tıklayın"
+
+#. module: connector
+#: field:connector.config.settings,auth_oauth_facebook_client_id:0
+#: field:connector.config.settings,auth_oauth_google_client_id:0
+msgid "Client ID"
+msgstr "İstemci ID"
+
+#. module: connector
+#: field:connector.config.settings,cal_client_id:0
+msgid "Client_id"
+msgstr "Client_id"
+
+#. module: connector
+#: field:connector.config.settings,cal_client_secret:0
+msgid "Client_key"
+msgstr "Client_key"
 
 #. module: connector
 #: field:queue.job,company_id:0
@@ -155,26 +196,27 @@ msgid "Company"
 msgstr "Şirket"
 
 #. module: connector
-#: field:queue.job.channel,complete_name:0 field:queue.job.function,channel:0
+#: field:queue.job.channel,complete_name:0
+#: field:queue.job.function,channel:0
 msgid "Complete Name"
-msgstr ""
+msgstr "Tam Adı"
 
 #. module: connector
 #: view:connector.config.settings:connector.view_connector_config_settings
 #: model:ir.actions.act_window,name:connector.action_connector_config_settings
 msgid "Configure Connector"
-msgstr ""
+msgstr "Bağlantıyı Ayarla"
 
 #. module: connector
 #: model:ir.module.category,name:connector.module_category_connector
 #: model:ir.ui.menu,name:connector.menu_connector_config_settings
 msgid "Connector"
-msgstr ""
+msgstr "Bağlayıcı"
 
 #. module: connector
 #: model:ir.model,name:connector.model_connector_backend
 msgid "Connector Backend"
-msgstr ""
+msgstr "Bağlantı Arka ucu"
 
 #. module: connector
 #: view:connector.checkpoint:connector.view_connector_checkpoint_form
@@ -183,35 +225,36 @@ msgstr ""
 #: model:ir.actions.act_window,name:connector.action_connector_checkpoint
 #: model:ir.model,name:connector.model_connector_checkpoint
 msgid "Connector Checkpoint"
-msgstr ""
+msgstr "Bağlayıcı Kontrol noktası"
 
 #. module: connector
 #: model:ir.model,name:connector.model_connector_config_settings
 msgid "Connector Configuration"
-msgstr ""
+msgstr "Bağlayıcı Ayarları"
 
 #. module: connector
 #: model:res.groups,name:connector.group_connector_manager
 msgid "Connector Manager"
-msgstr ""
+msgstr "Bağlayıcı Yöneticisi"
 
 #. module: connector
 #: model:ir.ui.menu,name:connector.menu_connector
 #: model:ir.ui.menu,name:connector.menu_connector_root
 #: view:res.partner:connector.view_partner_connector_form
 msgid "Connectors"
-msgstr ""
+msgstr "Bağlayıcılar"
 
 #. module: connector
 #: field:queue.job,date_created:0
 msgid "Created Date"
-msgstr ""
+msgstr "Oluşturuldu"
 
 #. module: connector
 #: field:connector.checkpoint,create_uid:0
 #: field:connector.checkpoint.review,create_uid:0
 #: field:connector.config.settings,create_uid:0
-#: field:queue.job.channel,create_uid:0 field:queue.requeue.job,create_uid:0
+#: field:queue.job.channel,create_uid:0
+#: field:queue.requeue.job,create_uid:0
 msgid "Created by"
 msgstr "Oluşturan"
 
@@ -219,24 +262,25 @@ msgstr "Oluşturan"
 #: field:connector.checkpoint,create_date:0
 #: field:connector.checkpoint.review,create_date:0
 #: field:connector.config.settings,create_date:0
-#: field:queue.job.channel,create_date:0 field:queue.requeue.job,create_date:0
+#: field:queue.job.channel,create_date:0
+#: field:queue.requeue.job,create_date:0
 msgid "Created on"
 msgstr "Oluşturuldu"
 
 #. module: connector
 #: field:queue.job,retry:0
 msgid "Current try"
-msgstr ""
+msgstr "Şimdiki Denenme"
 
 #. module: connector
 #: view:queue.job:connector.view_queue_job_form
 msgid "Current try / max. retries"
-msgstr ""
+msgstr "Şimdiki deneme / max. deneme"
 
 #. module: connector
 #: field:queue.job,date_done:0
 msgid "Date Done"
-msgstr ""
+msgstr "Yapıldığı Tarih"
 
 #. module: connector
 #: help:connector.checkpoint,message_last_post:0
@@ -254,50 +298,60 @@ msgstr "Açıklama"
 #: field:connector.checkpoint,display_name:0
 #: field:connector.checkpoint.review,display_name:0
 #: field:connector.config.settings,display_name:0
-#: field:external.binding,display_name:0 field:queue.job,display_name:0
+#: field:external.binding,display_name:0
+#: field:queue.job,display_name:0
 #: field:queue.job.channel,display_name:0
 #: field:queue.job.function,display_name:0
-#: field:queue.requeue.job,display_name:0 field:queue.worker,display_name:0
+#: field:queue.requeue.job,display_name:0
+#: field:queue.worker,display_name:0
 msgid "Display Name"
 msgstr "Görünen İsim"
 
 #. module: connector
-#: view:queue.job:connector.view_queue_job_search selection:queue.job,state:0
+#: view:queue.job:connector.view_queue_job_search
+#: selection:queue.job,state:0
 msgid "Done"
-msgstr ""
+msgstr "Yapıldı"
+
+#. module: connector
+#: field:connector.config.settings,auth_signup_reset_password:0
+msgid "Enable password reset from Login page"
+msgstr "Giriş sayfasında parola sıfırlamayı etkinleştir"
 
 #. module: connector
 #: field:queue.job,date_enqueued:0
 msgid "Enqueue Time"
-msgstr ""
+msgstr "kuyruk zamanı"
 
 #. module: connector
-#: view:queue.job:connector.view_queue_job_search selection:queue.job,state:0
+#: view:queue.job:connector.view_queue_job_search
+#: selection:queue.job,state:0
 msgid "Enqueued"
-msgstr ""
+msgstr "Kuyruğa eklendi"
 
 #. module: connector
 #: field:queue.job,exc_info:0
 msgid "Exception Info"
-msgstr ""
+msgstr "İstisna Bilgisi"
 
 #. module: connector
 #: view:queue.job:connector.view_queue_job_form
 msgid "Exception Information"
-msgstr ""
+msgstr "İstisna Bilgisi"
 
 #. module: connector
 #: field:queue.job,eta:0
 msgid "Execute only after"
-msgstr ""
+msgstr "Sadece sonra çalıştır"
 
 #. module: connector
 #: model:ir.model,name:connector.model_external_binding
 msgid "External Binding (abstract)"
-msgstr ""
+msgstr "Dış bağlantı (özet)"
 
 #. module: connector
-#: view:queue.job:connector.view_queue_job_search selection:queue.job,state:0
+#: view:queue.job:connector.view_queue_job_search
+#: selection:queue.job,state:0
 msgid "Failed"
 msgstr "Başarısız"
 
@@ -310,12 +364,12 @@ msgstr "Takipçiler"
 #. module: connector
 #: field:queue.job,func_name:0
 msgid "Func name"
-msgstr ""
+msgstr "Fonk adı"
 
 #. module: connector
 #: help:connector.config.settings,module_portal:0
 msgid "Give your customers access to their documents."
-msgstr ""
+msgstr "Müşterilerinize dökümanlarına erişim verin."
 
 #. module: connector
 #: view:queue.job:connector.view_queue_job_search
@@ -331,60 +385,65 @@ msgstr "Grupla..."
 #. module: connector
 #: help:connector.checkpoint,message_summary:0
 #: help:queue.job,message_summary:0
-msgid ""
-"Holds the Chatter summary (number of messages, ...). This summary is "
-"directly in html format in order to be inserted in kanban views."
-msgstr ""
-"Sohbet özetini tutar (kaç mesa vs) Bu özet kanban görünümleri gibi yerlerde "
-"kullanılmak için doğrudan HTML formatındadır. "
+msgid "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+msgstr "Sohbet özetini tutar (kaç mesa vs) Bu özet kanban görünümleri gibi yerlerde kullanılmak için doğrudan HTML formatındadır. "
 
 #. module: connector
-#: field:connector.backend,id:0 field:connector.checkpoint,id:0
-#: field:connector.checkpoint.review,id:0 field:connector.config.settings,id:0
-#: field:external.binding,id:0 field:queue.job,id:0
-#: field:queue.job.channel,id:0 field:queue.job.function,id:0
-#: field:queue.requeue.job,id:0 field:queue.worker,id:0
+#: field:connector.backend,id:0
+#: field:connector.checkpoint,id:0
+#: field:connector.checkpoint.review,id:0
+#: field:connector.config.settings,id:0
+#: field:external.binding,id:0
+#: field:queue.job,id:0
+#: field:queue.job.channel,id:0
+#: field:queue.job.function,id:0
+#: field:queue.requeue.job,id:0
+#: field:queue.worker,id:0
 msgid "ID"
 msgstr "ID"
 
 #. module: connector
-#: help:connector.checkpoint,message_unread:0 help:queue.job,message_unread:0
+#: help:connector.checkpoint,message_unread:0
+#: help:queue.job,message_unread:0
 msgid "If checked new messages require your attention."
 msgstr "Eğer işaretlenirse yeni mesajlar dikkatinizi ister."
 
 #. module: connector
 #: view:queue.job:connector.view_queue_job_form
 msgid "If the max. retries is 0, the number of retries is infinite."
-msgstr ""
+msgstr "Eğer max deneme 0 ise. sürekli denenir."
+
+#. module: connector
+#: help:connector.config.settings,auth_signup_uninvited:0
+msgid "If unchecked, only invited users may sign up."
+msgstr "Eğer işaretlenmez ise, Sadece davetli kullanıcılar kaydolabilir."
 
 #. module: connector
 #: help:connector.config.settings,alias_domain:0
-msgid ""
-"If you have setup a catch-all email domain redirected to the Odoo server, "
-"enter the domain name here."
-msgstr ""
+msgid "If you have setup a catch-all email domain redirected to the Odoo server, enter the domain name here."
+msgstr "Eğer odoo ya bir tüm e-postaları yakalayan bir e-posta alanı tanıttıysanız. Alan adını buraya girin."
 
 #. module: connector
 #: field:connector.checkpoint,backend_id:0
 msgid "Imported from"
-msgstr ""
+msgstr "Aktarılma kaynağı"
 
 #. module: connector
 #: field:connector.checkpoint,message_is_follower:0
 #: field:queue.job,message_is_follower:0
 msgid "Is a Follower"
-msgstr ""
+msgstr "Takip ediyor"
 
 #. module: connector
 #: model:ir.model,name:connector.model_queue_job_channel
 msgid "Job Channels"
-msgstr ""
+msgstr "İş kanalları"
 
 #. module: connector
 #: view:queue.job:connector.view_queue_job_search
 #: field:queue.job,job_function_id:0
 msgid "Job Function"
-msgstr ""
+msgstr "İş Fonksiyonu"
 
 #. module: connector
 #: model:ir.actions.act_window,name:connector.action_queue_job_function
@@ -395,12 +454,12 @@ msgstr ""
 #: view:queue.job.function:connector.view_queue_job_function_search
 #: view:queue.job.function:connector.view_queue_job_function_tree
 msgid "Job Functions"
-msgstr ""
+msgstr "İş Fonksiyonları"
 
 #. module: connector
 #: model:mail.message.subtype,name:connector.mt_job_failed
 msgid "Job failed"
-msgstr ""
+msgstr "İş başarısız"
 
 #. module: connector
 #: model:ir.actions.act_window,name:connector.action_queue_job
@@ -408,14 +467,15 @@ msgstr ""
 #: view:queue.job:connector.view_queue_job_form
 #: view:queue.job:connector.view_queue_job_search
 #: view:queue.job:connector.view_queue_job_tree
-#: field:queue.requeue.job,job_ids:0 field:queue.worker,job_ids:0
+#: field:queue.requeue.job,job_ids:0
+#: field:queue.worker,job_ids:0
 msgid "Jobs"
-msgstr ""
+msgstr "İşler"
 
 #. module: connector
 #: field:queue.worker,date_alive:0
 msgid "Last Alive Check"
-msgstr ""
+msgstr "Son canlı kontrol"
 
 #. module: connector
 #: field:connector.checkpoint,message_last_post:0
@@ -428,10 +488,12 @@ msgstr "Son mesaj tarihi"
 #: field:connector.checkpoint,__last_update:0
 #: field:connector.checkpoint.review,__last_update:0
 #: field:connector.config.settings,__last_update:0
-#: field:external.binding,__last_update:0 field:queue.job,__last_update:0
+#: field:external.binding,__last_update:0
+#: field:queue.job,__last_update:0
 #: field:queue.job.channel,__last_update:0
 #: field:queue.job.function,__last_update:0
-#: field:queue.requeue.job,__last_update:0 field:queue.worker,__last_update:0
+#: field:queue.requeue.job,__last_update:0
+#: field:queue.worker,__last_update:0
 msgid "Last Modified on"
 msgstr "Son değişiklik"
 
@@ -439,7 +501,8 @@ msgstr "Son değişiklik"
 #: field:connector.checkpoint,write_uid:0
 #: field:connector.checkpoint.review,write_uid:0
 #: field:connector.config.settings,write_uid:0
-#: field:queue.job.channel,write_uid:0 field:queue.requeue.job,write_uid:0
+#: field:queue.job.channel,write_uid:0
+#: field:queue.requeue.job,write_uid:0
 msgid "Last Updated by"
 msgstr "Son güncelleyen"
 
@@ -447,49 +510,54 @@ msgstr "Son güncelleyen"
 #: field:connector.checkpoint,write_date:0
 #: field:connector.checkpoint.review,write_date:0
 #: field:connector.config.settings,write_date:0
-#: field:queue.job.channel,write_date:0 field:queue.requeue.job,write_date:0
+#: field:queue.job.channel,write_date:0
+#: field:queue.requeue.job,write_date:0
 msgid "Last Updated on"
 msgstr "Son güncelleme"
 
 #. module: connector
 #: field:external.binding,sync_date:0
 msgid "Last synchronization date"
-msgstr ""
+msgstr "Son sekntronizasyon tarihi"
 
 #. module: connector
 #: field:connector.config.settings,module_multi_company:0
 msgid "Manage multiple companies"
-msgstr ""
+msgstr "Çoklu şirketleri yönet"
 
 #. module: connector
 #: code:addons/connector/queue/model.py:141
 #, python-format
 msgid "Manually set to done by %s"
-msgstr ""
+msgstr "%s tarafından elle Yapıldıya ayarlandı"
 
 #. module: connector
 #: field:queue.job,max_retries:0
 msgid "Max. retries"
-msgstr ""
+msgstr "Maks deneme"
 
 #. module: connector
-#: field:connector.checkpoint,message_ids:0 field:queue.job,message_ids:0
+#: field:connector.checkpoint,message_ids:0
+#: field:queue.job,message_ids:0
 msgid "Messages"
 msgstr "Mesajlar"
 
 #. module: connector
-#: help:connector.checkpoint,message_ids:0 help:queue.job,message_ids:0
+#: help:connector.checkpoint,message_ids:0
+#: help:queue.job,message_ids:0
 msgid "Messages and communication history"
 msgstr "Mesaj ve iletişim geçmişi"
 
 #. module: connector
 #: view:connector.checkpoint:connector.view_connector_checkpoint_search
-#: field:connector.checkpoint,model_id:0 field:queue.job,model_name:0
+#: field:connector.checkpoint,model_id:0
+#: field:queue.job,model_name:0
 msgid "Model"
-msgstr "Alan"
+msgstr "Model"
 
 #. module: connector
-#: field:connector.backend,name:0 field:queue.job.channel,name:0
+#: field:connector.backend,name:0
+#: field:queue.job.channel,name:0
 #: field:queue.job.function,name:0
 msgid "Name"
 msgstr "Adı"
@@ -497,128 +565,130 @@ msgstr "Adı"
 #. module: connector
 #: help:connector.checkpoint,name:0
 msgid "Name of the record to review"
-msgstr ""
+msgstr "İncelenecek kayıt adı"
 
 #. module: connector
 #: view:connector.checkpoint:connector.view_connector_checkpoint_search
 #: selection:connector.checkpoint,state:0
 msgid "Need Review"
-msgstr ""
+msgstr "İnceleme gerekiyor"
 
 #. module: connector
 #: code:addons/connector/queue/model.py:117
 #, python-format
 msgid "No action available for this job"
-msgstr ""
+msgstr "Bu iş için eylem gerekmiyor"
 
 #. module: connector
 #: model:ir.actions.client,name:connector.action_client_connector_menu
 msgid "Open Connector Menu"
-msgstr ""
+msgstr "Bağlayıcı Menüsünü Aç"
 
 #. module: connector
 #: field:queue.worker,pid:0
 msgid "PID"
-msgstr ""
+msgstr "PID"
 
 #. module: connector
 #: field:queue.job.channel,parent_id:0
 msgid "Parent Channel"
-msgstr ""
+msgstr "Ana Kanal"
 
 #. module: connector
 #: code:addons/connector/queue/model.py:454
 #, python-format
 msgid "Parent channel required."
-msgstr ""
+msgstr "Ana Kanal zorunlu."
 
 #. module: connector
-#: view:queue.job:connector.view_queue_job_search selection:queue.job,state:0
+#: view:queue.job:connector.view_queue_job_search
+#: selection:queue.job,state:0
 msgid "Pending"
-msgstr ""
+msgstr "Bekliyor"
 
 #. module: connector
 #: field:queue.job,func:0
 msgid "Pickled Function"
-msgstr ""
+msgstr "Pickled Function"
 
 #. module: connector
 #: field:queue.job,priority:0
 msgid "Priority"
-msgstr ""
+msgstr "Öncelik"
 
 #. module: connector
 #: model:ir.ui.menu,name:connector.menu_queue
 msgid "Queue"
-msgstr ""
+msgstr "Kuyruk"
 
 #. module: connector
 #: model:ir.model,name:connector.model_queue_job
 msgid "Queue Job"
-msgstr ""
+msgstr "Kuyruk İşi"
 
 #. module: connector
 #: model:ir.model,name:connector.model_queue_worker
 msgid "Queue Worker"
-msgstr ""
+msgstr "Kuyruk Çalışanı"
 
 #. module: connector
 #: field:connector.checkpoint,record:0
 msgid "Record"
-msgstr ""
+msgstr "Kayıt"
 
 #. module: connector
 #: field:connector.checkpoint,record_id:0
 msgid "Record ID"
-msgstr ""
+msgstr "Kayıt ID"
 
 #. module: connector
 #: field:connector.checkpoint,name:0
 msgid "Record Name"
-msgstr ""
+msgstr "Kayıt Adı"
 
 #. module: connector
 #: view:queue.job:connector.view_queue_job_form
 msgid "Related"
-msgstr ""
+msgstr "İlişkili"
 
 #. module: connector
 #: code:addons/connector/related_action.py:48
 #, python-format
 msgid "Related Record"
-msgstr ""
+msgstr "İlişkili Kayıt"
 
 #. module: connector
 #: field:connector.config.settings,font:0
 msgid "Report Font"
-msgstr ""
+msgstr "Rapor Fontu"
 
 #. module: connector
 #: view:queue.requeue.job:connector.view_requeue_job
 msgid "Requeue"
-msgstr ""
+msgstr "Tekrar Kuyrukla"
 
 #. module: connector
 #: view:queue.job:connector.view_queue_job_form
 msgid "Requeue Job"
-msgstr ""
+msgstr "İşi Tekrar Kuyrukla"
 
 #. module: connector
 #: model:ir.actions.act_window,name:connector.action_requeue_job
 #: view:queue.requeue.job:connector.view_requeue_job
 msgid "Requeue Jobs"
-msgstr ""
+msgstr "İşleri Tekrar Kuyrukla"
 
 #. module: connector
-#: view:queue.job:connector.view_queue_job_form field:queue.job,result:0
+#: view:queue.job:connector.view_queue_job_form
+#: field:queue.job,result:0
 msgid "Result"
-msgstr ""
+msgstr "Sonuç"
 
 #. module: connector
 #: view:connector.checkpoint.review:connector.view_connector_checkpoint_review
 #: model:ir.actions.act_window,name:connector.action_connector_checkpoint_review
 msgid "Review Checkpoints"
-msgstr ""
+msgstr "Kontrol Noktalarını incele"
 
 #. module: connector
 #: view:connector.checkpoint:connector.view_connector_checkpoint_form
@@ -626,50 +696,64 @@ msgstr ""
 #: view:connector.checkpoint:connector.view_connector_checkpoint_tree
 #: selection:connector.checkpoint,state:0
 msgid "Reviewed"
-msgstr ""
+msgstr "İncelendi"
+
+#. module: connector
+#: field:connector.config.settings,auth_admin_passkey_send_to_admin:0
+msgid "Send email to admin user."
+msgstr "Yöneticiye e-posta gönder."
+
+#. module: connector
+#: field:connector.config.settings,auth_admin_passkey_send_to_user:0
+msgid "Send email to user."
+msgstr "Kullanıcıya e-posta gönder."
 
 #. module: connector
 #: view:connector.checkpoint.review:connector.view_connector_checkpoint_review
 msgid "Set as reviewed"
-msgstr ""
+msgstr "İncelendi olarak işaretle"
 
 #. module: connector
 #: help:connector.config.settings,font:0
-msgid ""
-"Set the font into the report header, it will be used as default font in the "
-"RML reports of the user company"
-msgstr ""
+msgid "Set the font into the report header, it will be used as default font in the RML reports of the user company"
+msgstr "Set the font into the report header, it will be used as default font in the RML reports of the user company"
 
 #. module: connector
 #: view:queue.job:connector.view_queue_job_form
 msgid "Set to 'Done'"
-msgstr ""
+msgstr "'Yapıldı' olarak işaretle"
 
 #. module: connector
 #: help:connector.config.settings,module_share:0
 msgid "Share or embbed any screen of Odoo."
-msgstr ""
+msgstr "Herhangi odoo ekranını paylaş."
+
+#. module: connector
+#: field:connector.config.settings,google_cal_sync:0
+msgid "Show tutorial to know how to get my 'Client ID' and my 'Client Secret'"
+msgstr "Show tutorial to know how to get my 'Client ID' and my 'Client Secret'"
 
 #. module: connector
 #: code:addons/connector/queue/model.py:192
 #, python-format
-msgid ""
-"Something bad happened during the execution of the job. More details in the "
-"'Exception Information' section."
-msgstr ""
+msgid "Something bad happened during the execution of the job. More details in the 'Exception Information' section."
+msgstr "Görev infazı sırasında hata oluştu. Daha fazla bilgi için 'İstisna bilgisi' bölümüne bakın."
 
 #. module: connector
-#: field:queue.job,date_started:0 field:queue.worker,date_start:0
+#: field:queue.job,date_started:0
+#: field:queue.worker,date_start:0
 msgid "Start Date"
-msgstr ""
+msgstr "Başlama Zamanı"
 
 #. module: connector
-#: view:queue.job:connector.view_queue_job_search selection:queue.job,state:0
+#: view:queue.job:connector.view_queue_job_search
+#: selection:queue.job,state:0
 msgid "Started"
-msgstr ""
+msgstr "Başladı"
 
 #. module: connector
-#: view:queue.job:connector.view_queue_job_search field:queue.job,state:0
+#: view:queue.job:connector.view_queue_job_search
+#: field:queue.job,state:0
 msgid "State"
 msgstr "Durum"
 
@@ -682,7 +766,7 @@ msgstr "Durum"
 #: field:connector.checkpoint,message_summary:0
 #: field:queue.job,message_summary:0
 msgid "Summary"
-msgstr ""
+msgstr "Özet"
 
 #. module: connector
 #: field:queue.job,func_string:0
@@ -690,46 +774,72 @@ msgid "Task"
 msgstr "Görev"
 
 #. module: connector
+#: field:connector.config.settings,auth_signup_template_user_id:0
+msgid "Template user for new users created through signup"
+msgstr "Kayıt Ol ile oluşturulan kullanıcılar için kullanılacak şablon kullanıcı"
+
+#. module: connector
+#: help:connector.config.settings,google_drive_uri:0
+msgid "The URL to generate the authorization code from Google"
+msgstr "Google dan alınacak yetkilendirme kodunun oluşturulacağı URL"
+
+#. module: connector
 #: help:queue.job,max_retries:0
-msgid ""
-"The job will fail if the number of tries reach the max. retries.\n"
+msgid "The job will fail if the number of tries reach the max. retries.\n"
 "Retries are infinite when empty."
-msgstr ""
+msgstr "İşi maks deneme sayısı kere denendikten başarısız olacak.\n"
+"Boş bırakılırsa sürekli denenir."
 
 #. module: connector
 #: help:connector.checkpoint,backend_id:0
 msgid "The record has been imported from this backend"
-msgstr ""
+msgstr "Kaydın içe aktarıldığı arka bağlantı"
 
 #. module: connector
 #: help:connector.checkpoint,record:0
 msgid "The record to review."
-msgstr ""
+msgstr "İncelenecek kayıt."
 
 #. module: connector
 #: view:connector.checkpoint.review:connector.view_connector_checkpoint_review
 msgid "The selected checkpoints will be set as reviewed."
-msgstr ""
+msgstr "Seçilen kontrol noktaları incelendi olarak işaretlenecek."
 
 #. module: connector
 #: view:queue.requeue.job:connector.view_requeue_job
 msgid "The selected jobs will be requeued."
-msgstr ""
+msgstr "Seçilen işler tekrar kuyruğa eklenecek."
+
+#. module: connector
+#: help:connector.config.settings,auth_signup_reset_password:0
+msgid "This allows users to trigger a password reset from the Login page."
+msgstr "Bu kullanıcıların giriş sayfasında parola sıfırlama isteği yapabilmelerini sağlar."
 
 #. module: connector
 #: help:connector.config.settings,module_google_calendar:0
 msgid "This installs the module google_calendar."
-msgstr ""
+msgstr "Bu google_calendar modülünü kurar."
 
 #. module: connector
 #: help:connector.config.settings,module_google_drive:0
 msgid "This installs the module google_docs."
-msgstr ""
+msgstr "Bu google_docs modülünü kurar."
 
 #. module: connector
-#: field:queue.job,uuid:0 field:queue.worker,uuid:0
+#: field:connector.config.settings,google_drive_uri:0
+msgid "URI"
+msgstr "URI"
+
+#. module: connector
+#: field:connector.config.settings,server_uri:0
+msgid "URI for tuto"
+msgstr "tuto için URI"
+
+#. module: connector
+#: field:queue.job,uuid:0
+#: field:queue.worker,uuid:0
 msgid "UUID"
-msgstr ""
+msgstr "UUID"
 
 #. module: connector
 #: field:connector.checkpoint,message_unread:0
@@ -738,46 +848,64 @@ msgid "Unread Messages"
 msgstr "Okunmamış mesajlar"
 
 #. module: connector
+#: field:connector.config.settings,module_note_pad:0
+msgid "Use collaborative pads (etherpad)"
+msgstr "Ortak çalışma tahtalarını kullan (etherpad)"
+
+#. module: connector
 #: field:connector.config.settings,module_auth_oauth:0
-msgid ""
-"Use external authentication providers, sign in with google, facebook, ..."
-msgstr ""
+msgid "Use external authentication providers, sign in with google, facebook, ..."
+msgstr "Use external authentication providers, sign in with google, facebook, ..."
+
+#. module: connector
+#: field:connector.config.settings,group_note_fancy:0
+msgid "Use fancy layouts for notes"
+msgstr "Use fancy layouts for notes"
 
 #. module: connector
 #: field:queue.job,user_id:0
 msgid "User ID"
-msgstr ""
+msgstr "User ID"
 
 #. module: connector
 #: field:connector.backend,version:0
 msgid "Version"
-msgstr ""
+msgstr "Versiyon"
+
+#. module: connector
+#: help:connector.config.settings,auth_admin_passkey_send_to_user:0
+msgid "When the administrator use his password to login in with a different account, Odoo will send an email to the account user."
+msgstr "When the administrator use his password to login in with a different account, Odoo will send an email to the account user."
+
+#. module: connector
+#: help:connector.config.settings,auth_admin_passkey_send_to_admin:0
+msgid "When the administrator use his password to login in with a different account, Odoo will send an email to the admin user."
+msgstr "When the administrator use his password to login in with a different account, Odoo will send an email to the admin user."
 
 #. module: connector
 #: model:ir.model,name:connector.model_queue_requeue_job
 msgid "Wizard to requeue a selection of jobs"
-msgstr ""
+msgstr "Wizard to requeue a selection of jobs"
 
 #. module: connector
 #: help:connector.config.settings,module_multi_company:0
-msgid ""
-"Work in multi-company environments, with appropriate security access between "
-"companies.\n"
+msgid "Work in multi-company environments, with appropriate security access between companies.\n"
 "-This installs the module multi_company."
-msgstr ""
+msgstr "Work in multi-company environments, with appropriate security access between companies.\n"
+"-This installs the module multi_company."
 
 #. module: connector
 #: field:queue.job,worker_id:0
 #: view:queue.worker:connector.view_queue_worker_form
 #: view:queue.worker:connector.view_queue_worker_tree
 msgid "Worker"
-msgstr ""
+msgstr "Worker"
 
 #. module: connector
 #: model:ir.actions.act_window,name:connector.action_queue_worker
 #: model:ir.ui.menu,name:connector.menu_queue_worker
 msgid "Workers"
-msgstr ""
+msgstr "Workers"
 
 #. module: connector
 #: view:connector.checkpoint.review:connector.view_connector_checkpoint_review
@@ -789,4 +917,5 @@ msgstr "ya da"
 #. module: connector
 #: view:connector.checkpoint:connector.view_connector_checkpoint_form
 msgid "to verify it:"
-msgstr ""
+msgstr "Doğrulamak için:"
+
