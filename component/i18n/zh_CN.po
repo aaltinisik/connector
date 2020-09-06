@@ -1,39 +1,36 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * component
+#	* component
 #
-# Translators:
-# OCA Transbot <transbot@odoo-community.org>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 11.0\n"
+"Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-05 16:56+0000\n"
-"PO-Revision-Date: 2020-02-04 20:13+0000\n"
-"Last-Translator: Nelson Ramírez Sánchez <info@konos.cl>\n"
-"Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
-"Language: es\n"
+"PO-Revision-Date: 2019-09-01 06:14+0000\n"
+"Last-Translator: 黎伟杰 <674416404@qq.com>\n"
+"Language-Team: none\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.10\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.8\n"
 
 #. module: component
 #: model:ir.model,name:component.model_collection_base
 msgid "Base Abstract Collection"
-msgstr "Colección Abstracta de Base"
+msgstr "基础抽象集合"
 
 #. module: component
 #: model:ir.model,name:component.model_component_builder
 msgid "Component Builder"
-msgstr "Generador de Componentes"
+msgstr "组件构建器"
 
 #. module: component
 #: model:ir.model.fields,field_description:component.field_collection_base__display_name
 #: model:ir.model.fields,field_description:component.field_component_builder__display_name
 msgid "Display Name"
-msgstr "Nombre mostrado"
+msgstr "显示名称"
 
 #. module: component
 #: model:ir.model.fields,field_description:component.field_collection_base__id
@@ -45,4 +42,4 @@ msgstr "ID"
 #: model:ir.model.fields,field_description:component.field_collection_base____last_update
 #: model:ir.model.fields,field_description:component.field_component_builder____last_update
 msgid "Last Modified on"
-msgstr "Última modificación el"
+msgstr "最后修改时间"
